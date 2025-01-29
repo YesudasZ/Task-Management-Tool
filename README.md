@@ -7,7 +7,7 @@
 
 ## 📌 Overview
 Task Management Tool is a web application designed to help users efficiently manage their tasks with an intuitive and user-friendly interface. 
-
+   
 ## 🎯 Features
 - ✅ **User Authentication** (Google Sign-In via Firebase)
 - 📋 **Task Management** (Add, Edit, Delete, and Drag & Drop Sorting)
