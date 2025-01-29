@@ -1,4 +1,4 @@
-import { useId, useState, type ChangeEvent, useEffect } from "react"
+import { useState, type ChangeEvent, useEffect } from "react"
 import {
   Modal,
   Box,
@@ -31,7 +31,7 @@ const StyledModal = styled(Modal)({
   justifyContent: "center",
 })
 
-const CategoryButton = styled(ToggleButton)(({ theme }) => ({
+const CategoryButton = styled(ToggleButton)(() => ({
   border: "none !important",
   borderRadius: "20px !important",
   padding: "8px 24px",
@@ -112,6 +112,7 @@ export const EditTaskModal = ({ open, onClose, task }: EditTaskModalProps) => {
   const handleSubmit = async () => {
     try {
       await dispatch(updateTask({ ...formData, attachment }))
+      setAttachment(null)
       onClose()
     } catch (error) {
       console.error("Error updating task:", error)
