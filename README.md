@@ -1,50 +1,106 @@
-# React + TypeScript + Vite
+# 📝 Task Management Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Task Management Tool](https://your-image-link.com) <!-- Optional: Add a banner image -->
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 [Task Management Tool](https://task-management-tool-one.vercel.app/login)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Overview
+Task Management Tool is a web application designed to help users efficiently manage their tasks with an intuitive and user-friendly interface. 
 
-## Expanding the ESLint configuration
+## 🎯 Features
+- ✅ **User Authentication** (Google Sign-In via Firebase)
+- 📋 **Task Management** (Add, Edit, Delete, and Drag & Drop Sorting)
+- 📅 **Due Date Picker** using MUI Date Pickers
+- 🔍 **Real-Time Updates** with Redux Toolkit
+- 🎨 **Responsive UI** with Material UI & Tailwind CSS
+- 🌍 **Secure Routing** with Protected Routes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🖥️ Tech Stack
+| **Technology**   | **Description** |
+|-----------------|---------------|
+| **React.js** | Frontend framework |
+| **Redux Toolkit** | State management |
+| **Firebase Auth** | Google authentication |
+| **Vite** | Fast development build tool |
+| **MUI (Material UI)** | UI components |
+| **Tailwind CSS** | Styling framework |
+| **React Router** | Client-side routing |
 
-- Configure the top-level `parserOptions` property like this:
+## 📸 Screenshots
+<!-- Add images if available -->
+| Login Page | Dashboard |
+|------------|------------|
+| ![Login](https://your-image-link.com) | ![Dashboard](https://your-image-link.com) |
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation & Setup
+Follow these steps to run the project locally:
+
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/yourusername/task-management-tool.git
+cd task-management-tool
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### **2️⃣ Install Dependencies**
+```sh
+npm install
 ```
+
+### **3️⃣ Add Firebase Configuration**
+Create a `.env` file in the root directory and add your Firebase credentials:
+```env
+VITE_FIREBASE_API_KEY=your-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+VITE_FIREBASE_APP_ID=your-app-id
+```
+
+### **4️⃣ Run the Project**
+```sh
+npm run dev
+```
+The application should now be running on `http://localhost:5173`.
+
+## 🚀 Deployment
+This project is deployed on **Vercel**.
+
+### **Steps to Deploy**
+1. Push your project to **GitHub**.
+2. Connect your GitHub repo to **Vercel**.
+3. Set up **Environment Variables** in **Vercel Dashboard → Settings**.
+4. Deploy the project.
+
+## 🎯 Usage
+1. Sign in with **Google Authentication**.
+2. Create, manage, and organize tasks using **drag & drop** functionality.
+3. Securely access tasks with **protected routes**.
+
+## 🔧 Troubleshooting
+| **Issue** | **Solution** |
+|-----------|-------------|
+| `auth/unauthorized-domain` | Add your Vercel domain to **Firebase Authorized Domains**. |
+| `auth/network-request-failed` | Check internet connection or **CORS settings**. |
+| `auth/invalid-api-key` | Ensure `.env` file has the correct **Firebase API keys**. |
+
+## 🤝 Contributing
+We welcome contributions! To contribute:
+1. Fork the repo.
+2. Create a new branch (`feature/new-feature`).
+3. Commit and push your changes.
+4. Submit a Pull Request.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+## 📞 Contact
+For any queries or support, reach out via:
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+- **GitHub**: [Your GitHub](https://github.com/yourusername)
+
+---
+
+### 🎉 **Enjoy using the Task Management Tool! 🚀**
