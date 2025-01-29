@@ -15,7 +15,7 @@ interface TaskCardProps {
   onSelect?: (taskId: string) => void
 }
 
-export const TaskCard = ({ task, onStatusChange, variant = "board", selected, onSelect }: TaskCardProps) => {
+export const TaskCard = ({ task, variant = "board", selected, onSelect }: TaskCardProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const [editModalOpen, setEditModalOpen] = useState(false)

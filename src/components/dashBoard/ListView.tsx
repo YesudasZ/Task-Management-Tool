@@ -88,14 +88,15 @@ export const ListView = ({ sections, onTaskStatusChange, onTaskSelect, selectedT
             ) : (
               <Box>
                 {section.tasks.map((task: Task) => (
-                  <TaskCard
-                    key={task.id}
-                    task={task}
-                    onStatusChange={onTaskStatusChange}
-                    onSelect={onTaskSelect}
-                    isSelected={selectedTasks.includes(task.id)}
-                    variant="list"
-                  />
+                <TaskCard
+                key={task.id}
+                task={task}
+                onStatusChange={onTaskStatusChange}
+                onSelect={(taskId) => onTaskSelect(taskId, selectedTasks.includes(taskId))} // Corrected function signature
+                selected={selectedTasks.includes(task.id)}
+                variant="list"
+              />
+              
                 ))}
                 <Button
                   startIcon={<Plus size={20} />}
